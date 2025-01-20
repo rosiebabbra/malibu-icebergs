@@ -1,0 +1,80 @@
+/* Navbar.css */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    flex: 1;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    /* Distributes space evenly */
+    align-items: center;
+    max-width: 100%;
+    /* Ensures it uses the full width of its container */
+    overflow: visible;
+    /* Prevents items from being hidden */
+    padding: 0 20px;
+    /* Adds some padding on the sides */
+    flex-wrap: wrap;
+    /* Ensures items wrap if there's not enough space */
+}
+
+.navbar.open {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+}
+
+.navbar-child {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.nav-button {
+    background-color: #fff;
+    border: 0;
+    padding: 10px 20px;
+}
+
+.nav-button:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        max-height: 0;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+}

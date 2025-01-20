@@ -3,6 +3,9 @@ import './App.css'
 import { Routes, Route, useNavigate } from 'react-router'
 import About from './pages/About/About.tsx'
 import Sustainability from './pages/Sustainability/Sustainability.tsx';
+import Proposal from './pages/Proposal/Proposal.tsx';
+import FAQ from './pages/FAQ/Faq.tsx';
+import GetInvolved from './pages/GetInvolved/GetInvolved.tsx';
 
 function Home() {
 
@@ -34,7 +37,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/proposal" element={<Proposal />} />
       <Route path="/sustainability" element={<Sustainability />} />
+      <Route path="/get-involved" element={<GetInvolved />} />
+      <Route path="/faqs" element={<FAQ />} />
     </Routes>
   );
 }

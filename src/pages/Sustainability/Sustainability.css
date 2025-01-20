@@ -4,3 +4,7 @@
     padding: 25px;
     max-width: 768px;
 }
+
+.heading {
+    font-weight: bold;
+}
