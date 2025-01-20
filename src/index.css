@@ -1,5 +1,9 @@
+* {
+  font-family: Montserrat;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -36,12 +40,7 @@ h1 {
   margin: 0;
 }
 
-.container {
-  gap: 150px;
-}
-
-
-button {
+.home-button {
   background-color: rgb(255, 131, 203) !important;
   width: 100%;
   border-radius: 8px;
@@ -55,14 +54,14 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {
+.home-button:hover {
   color: #fff;
   background-color: #646cff !important;
   border-color: #646cff;
 }
 
-button:focus,
-button:focus-visible {
+.home-button:focus,
+.home-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -76,7 +75,7 @@ button:focus-visible {
     color: #747bff;
   }
 
-  button {
+  .home-button {
     background-color: #f9f9f9;
   }
 }

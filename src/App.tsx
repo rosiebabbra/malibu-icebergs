@@ -1,25 +1,42 @@
 import icebergs from './assets/icebergs.jpg'
 import './App.css'
-import { useNavigate } from 'react-router';
+import { Routes, Route, useNavigate } from 'react-router'
+import About from './pages/About/About.tsx'
+import Sustainability from './pages/Sustainability/Sustainability.tsx';
 
-function App() {
+function Home() {
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const handleNavigate = () => {
-  //   navigate('/about'); // Programmatically navigate to the About page
-  // };
+  const handleNavigate = () => {
+    navigate('/about');
+  };
 
   return (
-    <div className="container">
-      <div className='left-container'>
-        <h1>MALIBU ICEBERGS</h1>
-        <p style={{ marginLeft: "auto", marginRight: "auto" }}>Malibu, California | Est. Completion: 2030</p>
-        <button>Enter</button></div>
-      <div className="icebergs-container">
-        <img className='icebergs' src={icebergs} /></div>
-    </div>
+    <>
+      <div className='container'>
+        <div className='left-container'>
+          <h1 className='title'>MALIBU ICEBERGS</h1>
+          <div className='description'>
+            Inspired by the world famous Bondi Icebergs swimming club in Sydney.
+            The first of its kind on the California coast.</div>
+          <button className='home-button' onClick={handleNavigate}>Enter</button></div>
+        <div className="right-container">
+          <img className='icebergs' src={icebergs} /></div>
+      </div>
+    </>
   )
 }
 
-export default App
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/sustainability" element={<Sustainability />} />
+    </Routes>
+  );
+}
+
+export default App;
