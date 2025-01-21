@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    position: relative;
 }
 
 .logo {
@@ -13,6 +14,7 @@
 
 .hamburger {
     display: none;
+    /* Hidden by default for larger screens */
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -27,35 +29,39 @@
 
 .navbar {
     display: flex;
+    flex-direction: row;
+    /* Horizontal layout for desktop */
     justify-content: space-around;
-    /* Distributes space evenly */
     align-items: center;
-    max-width: 100%;
-    /* Ensures it uses the full width of its container */
+    width: 100%;
+    /* Full width on desktop */
+    background-color: transparent;
+    /* No background for desktop */
+    box-shadow: none;
+    position: static;
+    /* Default flow position */
     overflow: visible;
-    /* Prevents items from being hidden */
-    padding: 0 20px;
-    /* Adds some padding on the sides */
-    flex-wrap: wrap;
-    /* Ensures items wrap if there's not enough space */
+    /* Always visible */
+    max-height: none;
+    /* Remove height restriction */
 }
 
 .navbar.open {
-    display: flex;
     flex-direction: column;
-    max-height: 500px;
+    /* Only applies in mobile view */
 }
 
 .navbar-child {
     font-size: 14px;
     text-align: center;
-    margin: 10px 0;
+    margin: 0 10px;
 }
 
 .nav-button {
     background-color: #fff;
     border: 0;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    text-align: center;
 }
 
 .nav-button:hover {
@@ -66,15 +72,30 @@
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        /* Display hamburger menu on smaller screens */
     }
 
     .navbar {
         display: none;
+        /* Hidden by default in mobile view */
         flex-direction: column;
+        position: absolute;
+        /* Dropdown style in mobile */
+        top: 100%;
+        /* Below the header */
+        left: 0;
+        background-color: #fff;
+        /* Add background for dropdown */
+        width: 100%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
 
     .navbar.open {
         display: flex;
+        /* Show menu when open */
+        max-height: 500px;
     }
 }

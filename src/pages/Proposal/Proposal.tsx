@@ -10,7 +10,7 @@ function Proposal() {
             <div className='page-content'>
                 <p className='heading'>Proposal</p>
                 <center>
-                    <img src='./icebergs.jpg' width="500" />
+                    <img src='./icebergs.jpg' className='proposal-img' />
                 </center>
                 <br />
                 <p>

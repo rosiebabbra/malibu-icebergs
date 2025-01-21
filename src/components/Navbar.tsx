@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <div className="header">
             <div className="logo">
-                <img src="./logo.png" height="150" alt="Logo" />
+                <img src="./logo.png" height="175" alt="Logo" />
             </div>
             <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <div className="bar"></div>
@@ -27,7 +27,7 @@ function Navbar() {
                 <div className="navbar-child"><button className="nav-button" onClick={() => handleRouting('/proposal')}>Proposal</button></div>
                 <div className="navbar-child"><button className="nav-button" onClick={() => handleRouting('/faqs')}>FAQs</button></div>
                 <div className="navbar-child"><button className="nav-button" onClick={() => handleRouting('/sustainability')}>Sustainability</button></div>
-                <div className="navbar-child"><button className="nav-button" onClick={() => handleRouting('/get-involved')}>Get Involved</button></div>
+                <div className="navbar-child"><button className="nav-button" onClick={() => handleRouting('/getinvolved')}>Get Involved</button></div>
             </div>
         </div>
     );
