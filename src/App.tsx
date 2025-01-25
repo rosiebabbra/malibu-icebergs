@@ -23,7 +23,7 @@ function Home() {
           <div className='description'>
             Inspired by the world famous Bondi Icebergs swimming club in Sydney.
             The first of its kind on the California coast.</div>
-          <button className='home-button' onClick={handleNavigate}>Enter</button></div>
+          <button className='universal-button' onClick={handleNavigate}>Enter</button></div>
         <div className="right-container">
           <img className='icebergs' src={icebergs} /></div>
       </div>

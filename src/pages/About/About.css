@@ -8,3 +8,37 @@
 .heading {
     font-weight: bold;
 }
+
+.block {
+    margin: 25px auto;
+    padding: 1rem 4em;
+    background: #ffffff;
+    border-radius: 29px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.pink {
+    background-color: rgba(250, 149, 6, 0.201);
+}
+
+.purple {
+    background-color: rgba(193, 102, 246, 0.291);
+}
+
+.green {
+    background-color: rgba(58, 225, 111, 0.271);
+}
+
+.moi {
+    float: left;
+    padding-right: 15px;
+    border-radius: 45px;
+}
+
+@media (max-width:768px) {
+    .moi {
+        float: none;
+        padding: 0;
+        margin: auto;
+    }
+}

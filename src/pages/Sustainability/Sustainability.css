@@ -8,3 +8,18 @@
 .heading {
     font-weight: bold;
 }
+
+.sustainability-img {
+    max-height: 500px;
+    border-radius: 45px;
+    float: left;
+    margin-right: 35px;
+}
+
+@media (max-width: 768px) {
+    .sustainability-img {
+        max-width: 90vw;
+        border-radius: 45px;
+        padding-bottom: 25px;
+    }
+}

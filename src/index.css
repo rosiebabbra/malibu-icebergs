@@ -40,7 +40,7 @@ h1 {
   margin: 0;
 }
 
-.home-button {
+.universal-button {
   background-color: rgb(255, 131, 203) !important;
   width: 100%;
   border-radius: 8px;
@@ -54,14 +54,14 @@ h1 {
   transition: border-color 0.25s;
 }
 
-.home-button:hover {
+.universal-button:hover {
   color: #fff;
   background-color: #646cff !important;
   border-color: #646cff;
 }
 
-.home-button:focus,
-.home-button:focus-visible {
+.universal-button:focus,
+.universal-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -80,6 +80,7 @@ h1 {
   display: flex;
   font-size: 18px;
   float: left;
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
@@ -92,7 +93,7 @@ h1 {
     color: #747bff;
   }
 
-  .home-button {
+  .universal-button {
     background-color: #f9f9f9;
   }
 }

@@ -31,7 +31,7 @@
   text-align: center;
 }
 
-.home-button {
+.universal-button {
   margin-left: auto;
   margin-right: auto;
   max-width: 400px;
@@ -91,7 +91,7 @@
     display: none;
   }
 
-  .home-button {
+  .universal-button {
     margin-left: auto;
     margin-right: auto;
     max-width: 350px;

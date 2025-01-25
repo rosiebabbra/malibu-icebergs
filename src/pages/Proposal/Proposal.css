@@ -1,12 +1,23 @@
 .page-content {
     margin-left: auto;
     margin-right: auto;
-    padding: 25px;
+    padding: 15px;
     max-width: 768px;
 }
 
 .proposal-img {
-    max-width: 768px;
+    max-width: 350px;
+    border-radius: 45px;
+    float: left;
+}
+
+.block {
+    background: #ffffff;
+    border-radius: 29px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    float: right;
+    padding: 25px;
+    font-size: 15px;
 }
 
 @media (max-width: 768px) {

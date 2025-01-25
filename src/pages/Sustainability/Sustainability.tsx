@@ -1,13 +1,14 @@
 
 import Navbar from '../../components/Navbar.tsx'
 import Footer from '../../components/Footer.tsx'
+import './Sustainability.css'
 
 function Sustainability() {
     return (
         <><Navbar />
             <div className='page-content'>
                 <p className='heading'>Sustainability</p>
-                <img src='./sustainability.jpg' height="500px"></img>
+                <img src='./sustainability.png' className='sustainability-img'></img>
                 <p></p>
                 The ocean pool will be designed with sustainability at its core:
                 <li>Built using eco-friendly materials and practices.</li>
