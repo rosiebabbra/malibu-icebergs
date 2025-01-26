@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import Navbar from '../../components/Navbar.tsx';
 import Footer from '../../components/Footer.tsx';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import emailjs from '@emailjs/browser';
 import './GetInvolved.css';
@@ -40,12 +39,12 @@ function GetInvolved() {
     return (
         <>
             <Navbar />
-            <Container maxWidth="md" className="page-content">
+            <div className="page-content">
                 <form ref={form} onSubmit={sendEmail} className="email-form">
-                    <Typography variant="h5" className="heading" gutterBottom>
+                    <div className="heading">
                         Wanna get involved?
-                    </Typography>
-                    <Typography variant="body1" paragraph>
+                    </div>
+                    <Typography variant="body2" paragraph>
                         Great news! We are in very early stages, but please reach out to Rosie at{' '}
                         <a href="mailto:rosiebabbra@gmail.com">rosiebabbra@gmail.com</a> to get involved. Also, please sign up to our
                         mailing list below for updates!
@@ -77,7 +76,7 @@ function GetInvolved() {
                             Send
                         </button></div>
                 </form>
-            </Container>
+            </div>
 
             <Footer />
         </>

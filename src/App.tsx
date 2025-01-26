@@ -1,4 +1,4 @@
-import icebergs from './assets/icebergs.jpg'
+import icebergs from './assets/icebergs_slowmo.mp4'
 import './App.css'
 import { Routes, Route, useNavigate } from 'react-router'
 import About from './pages/About/About.tsx'
@@ -6,6 +6,7 @@ import Sustainability from './pages/Sustainability/Sustainability.tsx';
 import Proposal from './pages/Proposal/Proposal.tsx';
 import FAQ from './pages/FAQ/Faq.tsx';
 import GetInvolved from './pages/GetInvolved/GetInvolved.tsx';
+import Footer from './components/Footer.tsx';
 
 function Home() {
 
@@ -18,15 +19,16 @@ function Home() {
   return (
     <>
       <div className='container'>
-        <div className='left-container'>
-          <h1 className='title'>MALIBU ICEBERGS</h1>
-          <div className='description'>
-            Inspired by the world famous Bondi Icebergs swimming club in Sydney.
-            The first of its kind on the California coast.</div>
+        <video className='video-tag' autoPlay loop muted>
+          <source src={icebergs} type='video/mp4' />
+        </video>
+        <div className='home-page-content-container'>
+          <div className='title'>Malibu Icebergs</div>
+          <div className='description'>Inspired by the world famous Bondi Icebergs swimming club in Sydney. The first of its kind on the California coast.
+          </div>
           <button className='universal-button' onClick={handleNavigate}>Enter</button></div>
-        <div className="right-container">
-          <img className='icebergs' src={icebergs} /></div>
-      </div>
+      </div >
+      <Footer />
     </>
   )
 }

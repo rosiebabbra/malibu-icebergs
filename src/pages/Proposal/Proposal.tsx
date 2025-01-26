@@ -9,9 +9,9 @@ function Proposal() {
             <Navbar />
             <div className='page-content'>
                 <p className='heading'>Proposal</p>
-                <div>
+                <div className='block'>
                     <img src='./icebergs.jpg' className='proposal-img' />
-                    <p className='block proposal-img'>
+                    <p className='proposal-img'>
                         Ocean pools have became popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
                         Our proposal is to build the first ocean pool in California maintaining the principles of material ecology and sustainability.
                     </p></div>

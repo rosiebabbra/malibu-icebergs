@@ -18,7 +18,7 @@ function Navbar() {
     return (
         <div className="header">
             <div className="logo">
-                <img src="./logo.png" height="175" alt="Logo" onClick={handleLogoClick} />
+                <img src="./logo.png" height="125" alt="Logo" onClick={handleLogoClick} />
             </div>
             <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <div className="bar"></div>
