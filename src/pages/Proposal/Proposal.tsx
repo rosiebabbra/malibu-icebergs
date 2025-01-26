@@ -8,8 +8,8 @@ function Proposal() {
         <>
             <Navbar />
             <div className='page-content'>
-                <p className='heading'>Proposal</p>
                 <div className='block'>
+                    <p className='heading'>Proposal</p>
                     <img src='./icebergs.jpg' className='proposal-img' />
                     <p className='proposal-img'>
                         Ocean pools have became popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
