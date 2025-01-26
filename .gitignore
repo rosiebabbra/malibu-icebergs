@@ -27,4 +27,4 @@ dist-ssr
 .env
 
 # Assets
-src/assets/*
+src/assets/icebergs_slowmo.mp4
