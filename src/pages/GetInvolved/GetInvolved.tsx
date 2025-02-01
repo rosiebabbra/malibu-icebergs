@@ -1,12 +1,11 @@
-import React, { useRef } from 'react';
-import Navbar from '../../components/Navbar.tsx';
-import Footer from '../../components/Footer.tsx';
-import Typography from '@mui/material/Typography';
-import emailjs from '@emailjs/browser';
-import './GetInvolved.css';
+import React, { useRef, useState } from "react";
+import Navbar from "../../components/Navbar.tsx";
+import Footer from "../../components/Footer.tsx";
+import emailjs from "@emailjs/browser";
 
 function GetInvolved() {
     const form = useRef<HTMLFormElement>(null);
+    const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
@@ -15,10 +14,8 @@ function GetInvolved() {
         const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
         const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-        console.log(serviceId);
-
         if (!serviceId || !templateId || !publicKey) {
-            console.error('EmailJS environment variables are not set.');
+            console.error("EmailJS environment variables are not set.");
             return;
         }
 
@@ -28,56 +25,89 @@ function GetInvolved() {
             })
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    console.log("SUCCESS!");
+                    setIsSuccess(true); // Set success state to true
+                    if (form.current) {
+                        form.current.reset(); // Optionally reset the form
+                    }
                 },
                 (error: { text: string }) => {
-                    console.log('FAILED...', error.text);
-                },
+                    console.log("FAILED...", error.text);
+                }
             );
     };
 
     return (
         <>
             <Navbar />
-            <div className="page-content">
-                <form ref={form} onSubmit={sendEmail} className="email-form">
-                    <div className="heading">
-                        Wanna get involved?
-                    </div>
-                    <Typography variant="body2" paragraph>
-                        Great news! We are in very early stages, but please reach out to Rosie at{' '}
-                        <a href="mailto:rosiebabbra@gmail.com">rosiebabbra@gmail.com</a> to get involved. Also, please sign up to our
-                        mailing list below for updates!
-                    </Typography>
+            <div className="max-w-4xl mx-auto pt-6">
+                <form
+                    ref={form}
+                    onSubmit={sendEmail}
+                    className="bg-[#3b98982f] p-12 rounded-[29px] shadow-lg"
+                >
+                    <h2 className="text-lg font-bold">Wanna get involved?</h2>
+                    <p className="text-sm mt-3 mb-4 text-gray-700">
+                        Great news! We are in very early stages, but please reach out to
+                        Rosie at{" "}
+                        <a
+                            href="mailto:rosiebabbra@gmail.com"
+                            className="text-blue-600 underline"
+                        >
+                            rosiebabbra@gmail.com
+                        </a>{" "}
+                        to get involved. Also, please sign up to our mailing list below for
+                        updates!
+                    </p>
 
-
-                    <div className="form-group">
-                        <label htmlFor="user_name">Name</label>
+                    {/* Name Input */}
+                    <div className="mb-6">
+                        <label htmlFor="user_name" className="block font-semibold text-gray-800">
+                            Name
+                        </label>
                         <input
                             type="text"
                             id="user_name"
                             name="user_name"
                             placeholder="Enter your name"
                             required
+                            className="w-full p-3 text-sm border border-gray-300 rounded-md outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-300"
                         />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="user_email">Email</label>
+
+                    {/* Email Input */}
+                    <div className="mb-6">
+                        <label htmlFor="user_email" className="block font-semibold text-gray-800">
+                            Email
+                        </label>
                         <input
                             type="email"
                             id="user_email"
                             name="user_email"
                             placeholder="Enter your email"
                             required
+                            className="w-full p-3 text-sm border border-gray-300 rounded-md outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-300"
                         />
                     </div>
-                    <div className="button-container">
-                        <button type="submit" className="universal-button">
-                            Send
-                        </button></div>
-                </form>
-            </div>
 
+                    {/* Submit Button */}
+                    <div className="text-center">
+                        <button
+                            type="submit"
+                            className="bg-[#4a8080] text-white px-6 py-2 rounded-lg hover:bg-[#35DCA4] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 border-4 border-transparent w-full md:w-auto"
+                        >
+                            Send
+                        </button>
+                    </div>
+                </form>
+
+                {/* Success Message */}
+                {isSuccess && (
+                    <div className="mt-6 p-3 bg-green-100 text-green-800 border border-green-300 rounded-md text-center">
+                        Thank you for signing up! You'll hear from us soon.
+                    </div>
+                )}
+            </div>
             <Footer />
         </>
     );

@@ -1,44 +1,40 @@
-import './About.css'
-import Navbar from '../../components/Navbar.tsx';
-import Footer from '../../components/Footer.tsx'
+import Navbar from "../../components/Navbar.tsx";
+import Footer from "../../components/Footer.tsx";
 
 function About() {
     return (
         <>
             <Navbar />
-            <div className='page-content'>
-                <div className='block '>
-                    <p className='heading'>
-                        Who We Are</p>
-                    <p style={{ fontSize: "18px", textAlign: "center" }}>
-                        "Malibu Icebergs is a community-led proposal to bring an ocean pool to the Malibu landscape.
-                        Ocean pools have been described as a spiritual experience. They have became popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
+            <div className="max-w-4xl mx-auto p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-5xl mx-auto py-12">
+                    {/* Text Side */}
+                    <div>
+                        <h2 className="text-2xl font-bold text-gray-900">Who We Are</h2>
+                        <p className="text-gray-600 mt-4">
+                            Ocean pools have been described as a spiritual experience. They have become popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
+                        </p>
 
-                        The introduction of such a facility brings something entirely new to the region: a unique recreational experience with the iconic allure of Malibu.""
+                        <p className="text-gray-600 mt-4">Malibu Icebergs is a community-led proposal to bring an ocean pool to the Malibu landscape.
+                            The introduction of such a facility brings something entirely new to the region: a unique
+                            recreational experience with the iconic allure of Malibu.</p>
+                        <div className="text-left pt-5 text-gray-600 text-sm">- Rosie Babbra, Founder</div>
+                    </div>
 
-                    </p>
-                    <p style={{ textAlign: "right", fontSize: "18px" }}>- Rosie Babbra</p>
+                    {/* Image Side */}
+                    <div>
+                        <img src="./icebergs.jpg" className="rounded-lg shadow-lg" alt="Ocean Pool" />
+                    </div>
                 </div>
-
-                <div className='block '>
-                    <p className='heading'>
-                        The Vision</p><p>
-                        The ocean pool will seamlessly integrate with Malibu’s natural beauty, offering a safe and environmentally conscious way to enjoy ocean swimming. Featuring a stunning, architecturally designed structure that blends with the landscape, the pool will provide year-round access to a quintessentially Californian experience.
-
-                    </p>
-                </div>
-                <div className='block '>
-                    <p className='heading'>
-                        How It All Came About</p>
-                    <img className='moi' src='./moi.gif' height="350px" />
-                    <p>
-                        Hi, I'm Rosie. I'm a software engineer, digital nomad, Francophile, Australia enthusiast, and multimedia artist. In 2022 my travels took my to Sydney, Australia, where I discovered the
-                        marvel of ocean pools. After seeing one in person, I began to think - how on Earth could we not have one of these in the States?!
-                        <p></p>
-                        As a longtime Los Angeles resident, I couldn't think of a better place to introduce the concept than on the California coast. I started doing more research on ocean pools,
-                        reached out to architects experts from all over the world, and the idea for Malibu Icebergs was born.
-                        <p></p>
-                        I hope you'll join me on this journey to build the first ocean pool in the United States. If you want to get involved, don't be a stranger - I'd love to hear from you!
+                <div className="mx-auto bg-[#3b98982f] px-8 py-6 rounded-lg shadow-lg">
+                    <p className="font-semibold text-base pt-3">Our Mission</p>
+                    <p className="mt-2 text-gray-700 pb-3">
+                        Ocean pools enhance public health by offering ocean access while safeguarding swimmers from rocks and hazardous marine life. They provide an authentic open-water swimming experience within a controlled setting.
+                        With sustainable design and accessibility as core tenets, the ocean pool will seamlessly integrate
+                        with Malibu’s natural beauty, offering a safe and environmentally conscious way to enjoy ocean swimming.
+                        <br /><br />
+                        Featuring a stunning, architecturally designed structure that blends with the landscape, the pool will
+                        provide year-round access to a quintessentially Californian experience while promoting public health
+                        by encouraging physical activity and providing a safe alternative to open-water swimming.
                     </p>
                 </div>
             </div>

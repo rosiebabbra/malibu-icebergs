@@ -1,15 +1,12 @@
-import './Footer.css'
-
 function Footer() {
     return (
-        <div className="footer">
-            <div className='footer-contents'>
-                <img className='footer-logo' src='./logo.png' height="100"></img>
-                <div className="footer-text">
-                    Copyright © 2025 Rosie Babbra | All Rights Reserved</div>
+        <footer className="relative bg-white py-6 flex items-center w-full">
+            <div className="mx-auto flex flex-row items-center text-center">
+                <img className="h-24 mb-2" src="./logo.png" alt="Logo" />
+                <p className="text-xs text-black">Copyright © 2025 Rosie Babbra | All Rights Reserved</p>
             </div>
-        </div>
-    )
+        </footer>
+    );
 }
 
 export default Footer;
