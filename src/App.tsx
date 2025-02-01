@@ -6,7 +6,8 @@ import Proposal from "./pages/Proposal/Proposal";
 import FAQ from "./pages/FAQ/Faq";
 import GetInvolved from "./pages/GetInvolved/GetInvolved";
 import Footer from "./components/Footer";
-import icebergs from "./assets/icebergs_slowmo.mp4";
+
+const icebergs = 'https://firebasestorage.googleapis.com/v0/b/malibu-icebergs.firebasestorage.app/o/icebergs_slowmo.mp4?alt=media&token=d5dc29e8-22e4-4a6e-97ab-b54a2a2ced81';
 
 function Home() {
   const [videoLoaded, setVideoLoaded] = useState(false);
