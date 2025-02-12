@@ -40,14 +40,14 @@ function GetInvolved() {
     return (
         <>
             <Navbar />
-            <div className="max-w-4xl mx-auto pt-6">
+            <div className="max-w-4xl mx-auto pt-12 pb-6">
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="bg-[#3b98982f] p-12 rounded-[29px] shadow-lg"
+                    className="bg-gradient-to-r from-[#3866660b] to-[#4a80801c] p-12 rounded-[29px] shadow-lg"
                 >
                     <h2 className="text-lg font-bold">Wanna get involved?</h2>
-                    <p className="text-sm mt-3 mb-4 text-gray-700">
+                    <p className="text-md mt-3 mb-4 text-gray-700">
                         Great news! We are in very early stages, but please reach out to
                         Rosie at{" "}
                         <a
@@ -59,10 +59,11 @@ function GetInvolved() {
                         to get involved. Also, please sign up to our mailing list below for
                         updates!
                     </p>
+                    <img src='./icebergs.jpg' className='rounded-lg'></img>
 
                     {/* Name Input */}
                     <div className="mb-6">
-                        <label htmlFor="user_name" className="block font-semibold text-gray-800">
+                        <label htmlFor="user_name" className="block font-semibold text-gray-800 pt-8 pb-2">
                             Name
                         </label>
                         <input
@@ -77,7 +78,7 @@ function GetInvolved() {
 
                     {/* Email Input */}
                     <div className="mb-6">
-                        <label htmlFor="user_email" className="block font-semibold text-gray-800">
+                        <label htmlFor="user_email" className="block font-semibold text-gray-800 pb-2">
                             Email
                         </label>
                         <input
@@ -107,7 +108,7 @@ function GetInvolved() {
                         Thank you for signing up! You'll hear from us soon.
                     </div>
                 )}
-            </div>
+            </div><div className="h-56 "></div>
             <Footer />
         </>
     );
