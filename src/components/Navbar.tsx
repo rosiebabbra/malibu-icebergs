@@ -5,10 +5,10 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="min-w-full flex items-center justify-between px-6 py-4 bg-white shadow-md relative">
+        <nav className="min-w-full flex items-center justify-between px-6 py-2 shadow-md shadow-[#CBD5E180] relative">
             {/* Logo */}
-            <div className="flex-shrink-0 cursor-pointer" onClick={() => (window.location.href = "/")}>
-                <img src="./logo.png" className="h-24" alt="Logo" />
+            <div className="my-3 ml-6 flex-shrink-0 cursor-pointer" onClick={() => (window.location.href = "/")}>
+                <img src="./black_bg_creme_logo.png" className="h-24" alt="Logo" />
             </div>
 
             {/* Hamburger Menu (Mobile) */}
@@ -23,13 +23,14 @@ const Navbar = () => {
 
             {/* Navigation Links */}
             <div
-                className={`absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none flex flex-col md:flex-row items-center md:items-center transition-all duration-300 ${isMenuOpen ? "max-h-[500px] py-4" : "max-h-0 md:max-h-full"
+                className={`absolute md:relative top-full left-0 w-full md:w-auto bg-[#fdfcf8] md:bg-transparent shadow-md md:shadow-none flex flex-col md:flex-row items-center md:items-center transition-all duration-300 ${isMenuOpen ? "max-h-[500px] py-4" : "max-h-0 md:max-h-full"
                     } overflow-hidden md:overflow-visible`}
             >
                 {[
                     { name: "Home", path: "/" },
                     { name: "About", path: "/about" },
                     { name: "Proposal", path: "/proposal" },
+                    { name: "Team", path: "/team" },
                     { name: "FAQs", path: "/faqs" },
                     { name: "Sustainability", path: "/sustainability" },
                     { name: "Get Involved", path: "/get-involved" },
