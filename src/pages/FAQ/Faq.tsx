@@ -62,11 +62,13 @@ function FAQ() {
         <>
             <Navbar />
             <div className="max-w-4xl mx-auto p-6">
+                <div className="">
+                    {/* <img src='./icon-star.svg' /> */}
+                    <h1 className="text-2xl font-semibold text-center text-gray-700 pt-4">Frequently Asked Questions</h1>
+                    <h2 className="pt-2 text-center text-gray-600">Learn more about access, sustainability, and how to get involved.</h2>
+                </div>
                 <div className="max-w-5xl my-6 px-6 py-6 bg-[#fdfcf823] rounded-[29px] shadow-lg">
-                    <div className="flex items-center space-x-2">
-                        <img src='./icon-star.svg' />
-                        <h1 className="text-3xl font-bold text-start pl-2 text-black">FAQs</h1>
-                    </div>
+
 
                     <div className="mt-4">
                         {faqs.map((faq, index) => (

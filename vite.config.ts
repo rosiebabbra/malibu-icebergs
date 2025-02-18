@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist', // Make sure this is set correctly
-  }
+  },
+  assetsInclude: ['**/*.ttf']
 })

@@ -7,7 +7,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat", "Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Manrope", "sans-serif"], // Global default font
+        menu: ["BrownStd", "sans-serif"], // Custom font for menu only
+      },
+      fontWeight: {
+        light: "300",
+        bold: "700",
       },
     },
   },
