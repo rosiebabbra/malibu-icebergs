@@ -1,7 +1,6 @@
 import Navbar from "../../components/Navbar.tsx";
 import Footer from "../../components/Footer.tsx";
-
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 type Facility = {
     title: string;
@@ -35,7 +34,7 @@ const facilities: Facility[] = [
     {
         title: "Café & Coffee Shop",
         imgPath: "./pexels-lina-5328302.jpg",
-        imgSource: "https://www.pexels.com/search/coffee%20shop%20bright/",
+        imgSource: "https://www.pexels.com/photo/photo-of-white-and-light-blue-colored-cafe-bar-5328302/",
         description:
             "A casual, all-day café serving specialty coffee, organic teas, fresh juices, and light meals.",
     },
@@ -50,34 +49,72 @@ const facilities: Facility[] = [
 
 const FacilityCard: React.FC<Facility> = ({ title, description, imgPath, imgSource }) => {
     return (
-        <div className="bg-[#c8c7af3f] rounded-[19px] shadow-lg px-6 py-4 space-y-2 flex flex-col items-center text-center border border-gray-200 hover:shadow-xl transition duration-300 md:w-96">
+        <div className="bg-[#c8c7af3f] rounded-[19px] shadow-lg px-6 py-4 space-y-2 flex flex-col items-center text-center border border-gray-200 hover:shadow-xl transition duration-300 min-w-[280px] md:min-w-[320px] lg:min-w-[380px]">
             <h3 className="text-sm font-semibold">{title}</h3>
 
             <img
                 src={imgPath}
                 alt={title}
                 title={`Source: ${imgSource}`}
-                className="h-96 min-w-[250px] max-w-[250px] object-cover rounded-lg"
+                className="h-96 w-72 object-cover rounded-lg"
             />
 
             <div className="text-sm text-gray-600">{description}</div>
-
         </div>
     );
 };
 
 
-
 const FacilitiesSection: React.FC = () => {
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        const scrollContainer = scrollContainerRef.current;
+        if (!scrollContainer) return;
+
+        const atStart = scrollContainer.scrollLeft === 0;
+        const atEnd =
+            scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+            scrollContainer.scrollWidth;
+
+        const handleWheelScroll = (event: WheelEvent) => {
+            if (isHovered) {
+                event.preventDefault(); // Prevent default vertical scroll
+                scrollContainer.scrollLeft += event.deltaY; // Convert vertical scroll to horizontal
+            }
+
+            if (atStart) {
+                window.scrollBy(0, event.deltaX);
+            }
+            if (atEnd && event.deltaY > 0) {
+                document.body.style.overflow = "auto"; // Allow vertical scrolling downward
+            }
+
+        };
+
+        window.addEventListener("wheel", handleWheelScroll, { passive: false });
+
+        return () => {
+            window.removeEventListener("wheel", handleWheelScroll);
+        };
+    }, [isHovered]);
+
     return (
-        <section className="pt-6 pb-2 w-full">
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="w-full max-w-full md:overflow-x-auto scrollbar-hide pb-12">
-                    <div className="flex flex-col items-center gap-6 md:inline-flex md:flex-row md:gap-8">
-                        {facilities.map((facility, index) => (
-                            <FacilityCard key={index} {...facility} />
-                        ))}
-                    </div>
+        <section
+            className="pt-6 pb-2 w-full scrollbar-hide"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div className="max-w-5xl mx-auto px-6 scrollbar-hide">
+                {/* Horizontal scrolling container */}
+                <div
+                    ref={scrollContainerRef}
+                    className="w-full overflow-x-auto scrollbar-hide pb-12 flex flex-nowrap gap-8"
+                >
+                    {facilities.map((facility, index) => (
+                        <FacilityCard key={index} {...facility} />
+                    ))}
                 </div>
             </div>
         </section>
@@ -85,22 +122,20 @@ const FacilitiesSection: React.FC = () => {
 };
 
 
-
-
 function Proposal() {
     return (
         <>
             <Navbar />
-            <div className="flex-1 overflow-y-auto">
-                <div className="max-w-5xl mx-auto p-6">
-                    <div className="my-6 px-6 pt-4">
+            <div className="flex-1 overflow-y-auto scrollbar-hide">
+                <div className="max-w-5xl mx-auto p-6 scrollbar-hide">
+                    <div className="my-6 px-6 pt-4 scrollbar-hide">
                         <div className="pb-6">
                             <h2 className="text-[24px] font-bold text-center pb-2 text-gray-700">Our Vision</h2>
                             <h2 className="text-center text-[16px]  pb-4 text-gray-700">A Space for Wellness, Community & Innovation</h2>
                             <p className="text-[16px] text-center text-gray-600">
                                 Discover a thoughtfully curated space that blends comfort, convenience, and breathtaking oceanfront views. Designed to promote both physical and mental well-being, this serene setting fosters relaxation, reduces stress, and enhances overall public health—offering a seamless balance of rejuvenation and productivity.</p>
                         </div>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center scrollbar-hide">
                             <FacilitiesSection />
                         </div>
                     </div>

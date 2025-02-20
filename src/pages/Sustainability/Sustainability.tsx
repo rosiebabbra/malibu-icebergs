@@ -67,7 +67,7 @@ function Sustainability() {
 
 
             {/* Text Content Below the Image */}
-            <div className="w-full text-left md:text-left p-8 bg-[#c8c7af38] rounded-[29px] shadow-2xl">
+            <div className="w-full text-left md:text-left p-8  bg-gradient-to-r from-[#3866660b] to-[#4a80801c] rounded-[29px] shadow-2xl">
                 <p className="text-gray-800 mt-2 mb-4">
                     Malibu Icebergs is committed not only to preserving the health of the ocean for its diverse marine inhabitants but also to actively enhancing it through innovative and sustainable solutions. We recognize that true conservation goes beyond protection—it requires action, innovation, and collaboration to restore and improve the ecosystems we rely on.
                 </p>
