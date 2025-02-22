@@ -106,17 +106,15 @@ const FacilitiesSection: React.FC = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <div className="max-w-5xl mx-auto px-6 scrollbar-hide">
-                {/* Horizontal scrolling container */}
-                <div
-                    ref={scrollContainerRef}
-                    className="w-full overflow-x-auto scrollbar-hide pb-12 flex flex-nowrap gap-8"
-                >
-                    {facilities.map((facility, index) => (
-                        <FacilityCard key={index} {...facility} />
-                    ))}
-                </div>
+            <div
+                ref={scrollContainerRef}
+                className="w-full flex flex-col items-center gap-8 md:flex-row md:overflow-x-auto md:flex-nowrap pb-12 scrollbar-hide"
+            >
+                {facilities.map((facility, index) => (
+                    <FacilityCard key={index} {...facility} />
+                ))}
             </div>
+
         </section>
     );
 };
