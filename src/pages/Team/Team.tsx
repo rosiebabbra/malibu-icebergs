@@ -3,12 +3,12 @@ import Footer from "../../components/Footer.tsx";
 
 function Team() {
     const memberBlock = (name: string, imgPath: string, role: string, blurb: string, linkedinProfileUrl: string) =>
-        <div className="flex flex-col md:flex-row items-center bg-gradient-to-r from-[#3866660b] to-[#4a80801c] rounded-[29px] shadow-lg my-6 px-6 py-6">
+        <div className="flex flex-col md:flex-row items-center rounded-[29px] bg-[#fdfcf823] shadow-2xl my-6 px-6 py-6 mb-12">
 
 
             <img
                 src={imgPath}
-                className=" md:max-w-[400px] lg:max-w-60 mb-6 md:mb-0 md:mr-12 shadow-md rounded-md" />
+                className=" md:max-w-[400px] lg:max-w-60 mb-6 md:mb-0 md:mr-12 shadow-2xl rounded-md" />
 
 
             <div className="w-full">

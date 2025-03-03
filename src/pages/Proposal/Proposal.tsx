@@ -49,7 +49,7 @@ const facilities: Facility[] = [
 
 const FacilityCard: React.FC<Facility> = ({ title, description, imgPath, imgSource }) => {
     return (
-        <div className="bg-[#c8c7af3f] rounded-[19px] shadow-lg px-6 py-4 space-y-2 flex flex-col items-center text-center border border-gray-200 hover:shadow-xl transition duration-300 min-w-[280px] md:min-w-[320px] lg:min-w-[380px]">
+        <div className="rounded-[19px] border bg-[#fdfcf823] shadow-lg px-6 py-4 space-y-2 flex flex-col items-center text-center hover:shadow-xl transition duration-300 min-w-[280px] md:min-w-[320px] lg:min-w-[380px]">
             <h3 className="text-sm font-semibold">{title}</h3>
 
             <img

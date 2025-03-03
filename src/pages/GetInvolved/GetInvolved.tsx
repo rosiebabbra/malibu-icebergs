@@ -47,7 +47,7 @@ function GetInvolved() {
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="bg-gradient-to-r from-[#3866660b] to-[#4a80801c] p-12 rounded-[29px] shadow-lg w-full"
+                    className="bg-[#fdfcf823] rounded-[29px] shadow-2xl p-12 w-full"
                 >
                     <h2 className="text-lg font-bold">Wanna get involved?</h2>
                     <p className="text-md mt-3 mb-4 text-gray-700">
@@ -111,7 +111,7 @@ function GetInvolved() {
                             <div className="w-full max-w-lg">
                                 <button
                                     type="submit"
-                                    className="bg-[#e7e6d7] text-gray-800 text-[17px] font-semibold px-6 py-3 w-full min-h-[60px] flex items-center justify-center rounded-[29px] hover:bg-[#d8d7c4] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 border-4 border-transparent mx-auto block"
+                                    className="bg-[#e7e6d7] text-gray-800 text-[17px] font-semibold w-1/2 min-h-[50px] flex items-center justify-center rounded-lg hover:bg-[#d8d7c4] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 border-4 border-transparent mx-auto"
                                 >
                                     Send
                                 </button>

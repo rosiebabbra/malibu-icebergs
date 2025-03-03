@@ -17,14 +17,11 @@ function About() {
                     <div className="aspect-[16/13] md:aspect-[16/13] w-full">
                         <img
                             src="./icebergs_2.png"
-                            className="w-full h-full object-cover object-top rounded-md shadow-xl"
+                            className="w-full h-full object-cover object-top rounded-md shadow-2xl"
                             alt="Source: https://icebergs.com.au/icebergs-club/"
                             title="Source: https://icebergs.com.au/icebergs-club/"
                         />
                     </div>
-
-
-
                     <div>
 
                         <p className="text-gray-600 mt-14 text-[16px] text-center">
@@ -35,7 +32,7 @@ function About() {
                     </div>
                 </div>
                 <div className="h-6"></div>
-                <div className="w-4xl h-0.5 bg-[#4a78781c] mt-10"></div>
+
                 <div className="h-16"></div>
                 <div className="mx-auto">
                     <p className="font-semibold text-2xl text-center text-gray-700 pb-2">Our Mission</p>

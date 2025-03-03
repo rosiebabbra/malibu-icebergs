@@ -34,7 +34,7 @@ body {
 
 @layer base {
     html {
-        @apply bg-[#fdfcf8]
+        @apply bg-[#f6f6ef]
     }
 }
 

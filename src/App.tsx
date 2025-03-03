@@ -8,6 +8,8 @@ import FAQ from "./pages/FAQ/Faq";
 import GetInvolved from "./pages/GetInvolved/GetInvolved";
 import Footer from "./components/Footer";
 import Mixpanel from "./utils/mixpanel";
+import { MdChevronRight } from "react-icons/md";
+
 
 const icebergs = 'https://firebasestorage.googleapis.com/v0/b/malibu-icebergs.firebasestorage.app/o/icebergs_slowmo.mp4?alt=media&token=d5dc29e8-22e4-4a6e-97ab-b54a2a2ced81';
 
@@ -24,7 +26,7 @@ function Home() {
     <>
       {/* Loading Spinner */}
       {!videoLoaded && (
-        <div className="flex justify-center items-center h-screen w-screen bg-white">
+        <div className="flex justify-center items-center h-screen w-screen bg-[#fdfbe8]">
           <div className="w-24 h-24 border-[15px] border-gray-200 border-t-[#70a594] rounded-full animate-spin"></div>
         </div>
       )}
@@ -32,7 +34,7 @@ function Home() {
       {/* Background Video & Content */}
       <div className={`relative w-screen h-screen overflow-hidden ${videoLoaded ? "" : "hidden"}`}>
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+          className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none z-10"
           autoPlay
           loop
           muted
@@ -44,19 +46,21 @@ function Home() {
 
 
         {/* Content Box */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#32453F] bg-opacity-80 text-white rounded-[49px] px-12 pb-8 pt-12 text-center max-w-[600px] max-md:w-[90%]">
-          <h1 className="text-[42px] font-bold uppercase tracking-wide font-['Josefin_Sans'] max-md:text-[27px]">
-            Malibu Icebergs
-          </h1>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#32453F] bg-opacity-80 text-white rounded-[49px] px-12 pb-8 pt-10 text-center max-w-[600px] max-md:w-[90%]">
+          <img src='malibu_tides_white.png' className="h-[72px] mx-auto" />
+
           <p className="text-[16px] mt-3 font-medium">
-            Inspired by the world-famous Bondi Icebergs swimming club in Sydney. The first of its kind on the California coast.
+            An initiative inspired by the world-famous Bondi Icebergs swimming club in Sydney. The first of its kind on the California coast.
           </p>
           <button
-            className="text-[20px] mt-8 bg-[#c8c7af] text-black font-bold px-7 py-[3px] rounded-lg hover:bg-[#b7b6a4] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 border-4 border-transparent max-md:mb-0 max-md:mt-4 max-md:w-60"
+            className="mx-auto text-[20px] mt-8 bg-[#d8d7be] text-black font-bold pl-7 pr-3 py-[3px] rounded-lg hover:bg-[#e8e6c3] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 border-4 border-transparent flex items-center gap-2 max-md:pl-7 max-md:py-[3px] max-md:w-auto"
             onClick={handleNavigate}
           >
-            Enter
+            <span>Discover</span>
+            <MdChevronRight />
           </button>
+
+
         </div>
 
       </div>
