@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar.tsx";
 import Footer from "../../components/Footer.tsx";
 import React, { useEffect, useRef, useState } from "react";
 
+
 type Facility = {
     title: string;
     imgPath: string;
@@ -43,13 +44,13 @@ const facilities: Facility[] = [
         imgPath: "./pexels-andrew-2682452.jpg",
         imgSource: "https://www.pexels.com/photo/woman-in-gray-jacket-sitting-beside-desk-2682452/",
         description:
-            "A modern, open-office-plan ocean-view workspace designed to unlock creativity and productivity.",
+            "A modern workspace with ocean views designed to unlock creativity and productivity.",
     },
 ];
 
 const FacilityCard: React.FC<Facility> = ({ title, description, imgPath, imgSource }) => {
     return (
-        <div className="rounded-[19px] border bg-[#fdfcf823] shadow-lg px-6 py-4 space-y-2 flex flex-col items-center text-center hover:shadow-xl transition duration-300 min-w-[280px] md:min-w-[320px] lg:min-w-[380px]">
+        <div className="rounded-[19px] border bg-[#fdfcf823] px-6 py-4 space-y-2 flex flex-col items-center text-center hover:shadow-xl transition duration-300 min-w-[280px] md:min-w-[320px] lg:min-w-[380px]">
             <h3 className="text-sm font-semibold">{title}</h3>
 
             <img
@@ -128,7 +129,7 @@ function Proposal() {
                 <div className="max-w-5xl mx-auto p-6 scrollbar-hide">
                     <div className="my-6 px-6 pt-4 scrollbar-hide">
                         <div className="pb-6">
-                            <h2 className="text-[24px] font-bold text-center pb-2 text-gray-700">Our Vision</h2>
+                            <h2 className="text-[24px] font-bold text-center text-gray-700">Our Vision</h2>
                             <h2 className="text-center text-[16px]  pb-4 text-gray-700">A Space for Wellness, Community & Innovation</h2>
                             <p className="text-[16px] text-center text-gray-600">
                                 Discover a thoughtfully curated space that blends comfort, convenience, and breathtaking oceanfront views. Designed to promote both physical and mental well-being, this serene setting fosters relaxation, reduces stress, and enhances overall public health—offering a seamless balance of rejuvenation and productivity.</p>
@@ -140,7 +141,7 @@ function Proposal() {
                 </div>
 
             </div>
-            <div className="h-56 "></div>
+            <div className="h-12"></div>
             <Footer />
         </>
     );

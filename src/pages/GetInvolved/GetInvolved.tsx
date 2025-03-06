@@ -47,9 +47,9 @@ function GetInvolved() {
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="bg-[#fdfcf823] rounded-[29px] shadow-2xl p-12 w-full"
+                    className="bg-[#fdfcf823] rounded-[29px] shadow-2xl p-12 w-full mx-auto"
                 >
-                    <h2 className="text-lg font-bold">Wanna get involved?</h2>
+                    <h2 className="text-[22px] font-semibold text-gray-600">Wanna get involved?</h2>
                     <p className="text-md mt-3 mb-4 text-gray-700">
                         Great news! We are in very early stages, but please reach out to
                         Rosie at{" "}
@@ -88,7 +88,7 @@ function GetInvolved() {
                                     name="user_name"
                                     placeholder="Enter your name"
                                     required
-                                    className="w-full max-w-full min-h-[60px] flex-grow p-3 text-sm border border-gray-300 rounded-md outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-300 mx-auto block"
+                                    className="w-full max-w-full h-[40px] flex-grow p-3 text-sm border border-gray-300 rounded-md outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-300 mx-auto block"
                                 />
                             </div>
 
@@ -103,7 +103,7 @@ function GetInvolved() {
                                     name="user_email"
                                     placeholder="Enter your email"
                                     required
-                                    className="w-full max-w-full min-h-[60px] flex-grow p-3 text-sm border border-gray-300 rounded-md outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-300 mx-auto block"
+                                    className="w-full max-w-full h-[40px] flex-grow p-3 text-sm border border-gray-300 rounded-md outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-300 mx-auto block"
                                 />
                             </div>
 

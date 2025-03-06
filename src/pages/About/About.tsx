@@ -6,8 +6,7 @@ function About() {
         <>
             <Navbar />
             <div className="max-w-4xl mx-auto p-6">
-                <h2 className="text-[24px] pt-8 pb-2 font-bold text-gray-700 text-center">About Us</h2>
-                <h2 className="text-center text-[16px] pb-2 text-gray-700">Where Innovation Meets Nature</h2>
+                <h2 className="text-[24px] pt-12 font-bold text-gray-600 text-center">Where Innovation Meets Nature</h2>
                 <p className="text-gray-600 mt-1 pt-3 text-center text-[16px]">
                     An <b>ocean pool</b> is a fascinating convergence of a man-made pool and seawater, built along the coastline to provide a safer swimming environment while still being connected to the ocean.
                     They became popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
@@ -17,7 +16,7 @@ function About() {
                     <div className="aspect-[16/13] md:aspect-[16/13] w-full">
                         <img
                             src="./icebergs_2.png"
-                            className="w-full h-full object-cover object-top rounded-md shadow-2xl"
+                            className="w-full h-full object-cover object-top  rounded-[29px] shadow-2xl"
                             alt="Source: https://icebergs.com.au/icebergs-club/"
                             title="Source: https://icebergs.com.au/icebergs-club/"
                         />
@@ -31,10 +30,10 @@ function About() {
 
                     </div>
                 </div>
-                <div className="h-6"></div>
-
                 <div className="h-16"></div>
-                <div className="mx-auto">
+                <div className="h-0.5 bg-[#cecbcb]"></div>
+                <div className="h-16"></div>
+                <div className="mx-auto  shadow-lg rounded-[29px] p-12">
                     <p className="font-semibold text-2xl text-center text-gray-700 pb-2">Our Mission</p>
                     <p className="mt-2 text-gray-600 pb text-center">
                         Ocean pools enhance public health by offering ocean access while safeguarding swimmers from rocks and hazardous marine life. They provide an authentic open-water swimming experience within a controlled setting.

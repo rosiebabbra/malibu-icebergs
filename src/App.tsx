@@ -9,6 +9,7 @@ import GetInvolved from "./pages/GetInvolved/GetInvolved";
 import Footer from "./components/Footer";
 import Mixpanel from "./utils/mixpanel";
 import { MdChevronRight } from "react-icons/md";
+import ProjectStatus from "./pages/ProjectStatus/ProjectStatus";
 
 
 const icebergs = 'https://firebasestorage.googleapis.com/v0/b/malibu-icebergs.firebasestorage.app/o/icebergs_slowmo.mp4?alt=media&token=d5dc29e8-22e4-4a6e-97ab-b54a2a2ced81';
@@ -46,7 +47,7 @@ function Home() {
 
 
         {/* Content Box */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#32453F] bg-opacity-80 text-white rounded-[49px] px-12 pb-8 pt-10 text-center max-w-[600px] max-md:w-[90%]">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#32453F] bg-opacity-70 text-white rounded-[49px] px-12 pb-8 pt-10 text-center max-w-[600px] max-md:w-[90%]">
           <img src='malibu_tides_white.png' className="h-[72px] mx-auto" />
 
           <p className="text-[16px] mt-3 font-medium">
@@ -96,6 +97,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/proposal" element={<Proposal />} />
+        <Route path="/project-status" element={<ProjectStatus />} />
         <Route path="/team" element={<Team />} />
         <Route path="/sustainability" element={<Sustainability />} />
         <Route path="/get-involved" element={<GetInvolved />} />
