@@ -44,9 +44,9 @@ const Navbar = () => {
     const handleNavigateOnLogoClick = () => navigate("/");
 
     return (
-        <nav className="min-w-full flex flex-wrap items-center justify-between px-6 py-8 shadow-md bg-[#f6f6ef] relative z-10 font-['BrownStd'] font-[400]">
+        <nav className="min-w-full flex flex-wrap items-center justify-between px-6 py-4 shadow-md bg-[#f6f6ef] relative z-10 font-['BrownStd'] font-[400]">
             {/* Hamburger Menu (Mobile) */}
-            <div className="md:hidden flex flex-col gap-1 cursor-pointer z-50" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <div className="md:hidden flex flex-col gap-1 cursor-pointer z-50 absolute right-6 top-8" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <div className="w-6 h-1 bg-black transition-all duration-300"></div>
                 <div className="w-6 h-1 bg-black transition-all duration-300"></div>
                 <div className="w-6 h-1 bg-black transition-all duration-300"></div>
@@ -77,12 +77,25 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Navigation Menu */}
-            <div className={`absolute md:hidden top-full left-0 w-full bg-[#f6f6ef] shadow-md flex flex-col items-center transition-all duration-300 ${isMenuOpen ? "max-h-[500px] py-4 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}>
-                {[{ name: "Home", path: "/" }, { name: "About", path: "/about" }, { name: "Proposal", path: "/proposal" }, { name: "Team", path: "/team" }, { name: "FAQs", path: "/faqs" }, { name: "Sustainability", path: "/sustainability" }, { name: "Get Involved", path: "/get-involved" }].map((link) => (
-                    <NavLink key={link.path} to={link.path} className={({ isActive }) => `text-sm px-4 py-2 hover:bg-gray-200 transition rounded w-full text-center ${isActive ? "border-b-2 text-black font-bold" : "text-[#32453F]"}`}>
-                        {link.name}
-                    </NavLink>
-                ))}
+            <div className={`absolute md:hidden top-full left-0 w-full bg-[#f6f6ef] shadow-md flex flex-col items-center transition-all duration-300 ${isMenuOpen ? "max-h-[500px] pb-3 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}>
+                {[{ name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Proposal", path: "/proposal" },
+                { name: "Team", path: "/team" },
+                { name: "FAQs", path: "/faqs" },
+                { name: "Sustainability", path: "/sustainability" },
+                { name: "Get Involved", path: "/get-involved" }].map(
+                    (link) => (
+                        <NavLink
+                            key={link.path}
+                            to={link.path}
+                            className={
+                                ({ isActive }) =>
+                                    `text-sm px-4 py-2 hover:bg-gray-200 transition rounded w-full text-center ${isActive ? "text-black font-bold" : "text-[#32453F]"}`
+                            }>
+                            {link.name}
+                        </NavLink>
+                    ))}
             </div>
         </nav>
     );

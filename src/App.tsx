@@ -47,17 +47,17 @@ function Home() {
 
 
         {/* Content Box */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#32453F] bg-opacity-70 text-white rounded-[49px] px-12 pb-8 pt-10 text-center max-w-[600px] max-md:w-[90%]">
-          <img src='malibu_tides_white.png' className="h-[72px] mx-auto" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-[#32453F] bg-opacity-55 shadow-lg text-white rounded-[49px] px-12 pb-8 pt-10 text-center max-w-[600px] max-md:w-[90%]">
+          <img src='malibu_tides_white.png' alt="Malibu Tides Logo" className="h-12 mx-auto" />
 
           <p className="text-[16px] mt-3 font-medium">
             An initiative inspired by the world-famous Bondi Icebergs swimming club in Sydney. The first of its kind on the California coast.
           </p>
           <button
-            className="mx-auto text-[20px] mt-8 bg-[#d8d7be] text-black font-bold pl-7 pr-3 py-[3px] rounded-lg hover:bg-[#e8e6c3] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 border-4 border-transparent flex items-center gap-2 max-md:pl-7 max-md:py-[3px] max-md:w-auto"
+            className="mx-auto text-[20px] mt-6 bg-[#e8e6c3] text-black font-bold pl-7 pr-3 py-[3px] rounded-lg hover:bg-[#efecc1] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 border-4 border-transparent flex items-center gap-2 max-md:pl-7 max-md:py-[3px] max-md:w-auto"
             onClick={handleNavigate}
           >
-            <span>Discover</span>
+            <span className="font-[650] text-[18px] pb-[2px]">Discover</span>
             <MdChevronRight />
           </button>
 

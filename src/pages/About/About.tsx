@@ -6,7 +6,7 @@ function About() {
         <>
             <Navbar />
             <div className="max-w-4xl mx-auto p-6">
-                <h2 className="text-[24px] pt-12 font-bold text-gray-600 text-center">Where Innovation Meets Nature</h2>
+                <h2 className="text-[24px] pt-12 font-semibold text-gray-700 text-center">Where Innovation Meets Nature</h2>
                 <p className="text-gray-600 mt-1 pt-3 text-center text-[16px]">
                     An <b>ocean pool</b> is a fascinating convergence of a man-made pool and seawater, built along the coastline to provide a safer swimming environment while still being connected to the ocean.
                     They became popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
@@ -33,8 +33,8 @@ function About() {
                 <div className="h-16"></div>
                 <div className="h-0.5 bg-[#cecbcb]"></div>
                 <div className="h-16"></div>
-                <div className="mx-auto  shadow-lg rounded-[29px] p-12">
-                    <p className="font-semibold text-2xl text-center text-gray-700 pb-2">Our Mission</p>
+                <div className="mx-auto  shadow-lg rounded-[29px] py-12 px-6">
+                    <p className="font-semibold text-2xl text-center text-gray-700">Our Mission</p>
                     <p className="mt-2 text-gray-600 pb text-center">
                         Ocean pools enhance public health by offering ocean access while safeguarding swimmers from rocks and hazardous marine life. They provide an authentic open-water swimming experience within a controlled setting.
                         With sustainable design and accessibility as core tenets, the ocean pool will seamlessly integrate

@@ -25,7 +25,7 @@ function ProjectStatus() {
                         </p>
                         {/* Progress Bar */}
                         <div className="mt-10 mx-auto">
-                            <ProgressBar label="$1M Raised" variant="success" now={1.75} max={10} />
+                            <ProgressBar label="$500K Raised" variant="success" now={0.5} max={5} />
                             <div className="flex justify-between text-[14px] text-gray-600 mt-2">
                                 <span>$0</span>
                                 <span>$10M</span>
@@ -33,7 +33,7 @@ function ProjectStatus() {
                             {/* Call to Action */}
                             <div className="mt-6 text-center">
                                 <button onClick={() => window.location.href = "mailto:rosiebabbra@gmail.com?subject=Malibu%20Tides%20Donation"} className="text-[18px] bg-[#57dd84] text-black font-semibold px-6 py-1 rounded-lg 
-                            hover:bg-[#56ae73] transition-all duration-300 border-4 border-transparent">
+                            hover:bg-[#4ef084] transition-all duration-300 border-4 border-transparent">
                                     Donate Now
                                 </button>
                             </div>
@@ -55,7 +55,7 @@ function ProjectStatus() {
                                     { title: "Surrounding Amenities", icon: "🏛️" },
                                     { title: "Ongoing Maintenance & Staffing", icon: "🛠️" },
                                 ].map((item, index) => (
-                                    <div key={index} className="mx-auto w-full flex items-center gap-3 p-6 shadow-md rounded-lg border border-gray-200">
+                                    <div key={index} className="mx-auto w-full flex items-center gap-3 p-6 shadow-md hover:shadow-lg hover:cursor-pointer rounded-lg border-gray-200">
                                         <div className="text-[24px] mx-auto">{item.icon}
                                             <p className="font-semibold text-gray-700 mx-auto text-[16px]">{item.title}</p>
                                         </div>

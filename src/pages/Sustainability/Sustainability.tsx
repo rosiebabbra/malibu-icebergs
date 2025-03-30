@@ -33,7 +33,7 @@ function Sustainability() {
     }, []);
 
     const sustainabilityBlock = () =>
-        <div className="flex flex-col items-center my-6 px-6 py-6">
+        <div className="flex flex-col items-center my-6 px-2 py-6">
             {!imageLoaded && (
                 <div className="flex justify-center items-center h-screen w-screen bg-[#f6f6ef]">
                     <div className="w-10 h-10 border-4 border-gray-200 border-t-green-500 rounded-full animate-spin"></div>
@@ -46,11 +46,11 @@ function Sustainability() {
                 <h2 className="text-lg font-medium text-gray-800 mt-1 mb-4">
                     Creating a Better World by Revolutionizing Marine Habitats
                 </h2> */}
-                <div className="pt-6 pb-12 text-[36px] text-center">
-                    <p className="text-gray-800 pb-6  font-bold">
+                <div className="pb-6 text-center">
+                    <p className="text-gray-700 font-semibold text-[28px]">
                         Our vision is clear.
                     </p>
-                    <p className="px-12 text-lg text-center">We believe in a future where human ingenuity and environmental stewardship work hand in hand to ensure that the ocean—and all life within it—continues to thrive.</p>
+                    <p className="px-2 text-lg text-center text-gray-800">We believe in a future where human ingenuity and environmental stewardship work hand in hand to ensure that the ocean—and all life within it—continues to thrive.</p>
                 </div>
                 <div className="relative w-full overflow-hidden rounded-[29px]">
                     <img

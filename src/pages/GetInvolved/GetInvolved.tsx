@@ -43,13 +43,13 @@ function GetInvolved() {
     return (
         <>
             <Navbar />
-            <div className="w-[90%] max-w-5xl mx-auto pt-12 pb-6 px-6 sm:px-12">
+            <div className="w-[90%] max-w-5xl mx-auto pt-12 pb-6 px-2 sm:px-12">
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="bg-[#fdfcf823] rounded-[29px] shadow-2xl p-12 w-full mx-auto"
+                    className="bg-[#fdfcf823] rounded-[29px] shadow-2xl py-12 px-10 w-full mx-auto"
                 >
-                    <h2 className="text-[22px] font-semibold text-gray-600">Wanna get involved?</h2>
+                    <h2 className="text-[22px] font-semibold text-gray-750">Wanna get involved?</h2>
                     <p className="text-md mt-3 mb-4 text-gray-700">
                         Great news! We are in very early stages, but please reach out to
                         Rosie at{" "}
@@ -68,9 +68,9 @@ function GetInvolved() {
                         {/* Image Section */}
                         <div className="items-center justify-center">
                             <img
-                                src="./pexels-pixelcop-1556987.jpg"
+                                src="./pexels-pixelcop-1554665.jpg"
                                 alt="Ocean Pool"
-                                className="mx-auto rounded-lg object-cover object-[50%_65%] w-full h-[300px] mb-6"
+                                className="mx-auto rounded-lg object-cover object-[10%_95%] h-[300px] w-full mb-6"
                             />
                         </div>
 

@@ -85,7 +85,7 @@ function FAQ() {
                                         {faq.answer}
                                     </div>
                                 )}
-                                <div className="bg-slate-100 h-px mt-3" />
+                                <div className="bg-slate-200 h-px mt-3" />
                             </div>
                         ))}
                     </div>
