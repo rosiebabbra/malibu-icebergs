@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        custom: '1100px', // <- your new breakpoint
+      },
       fontFamily: {
         sans: ["Manrope", "sans-serif"], // Global default font
         menu: ["BrownStd", "sans-serif"], // Custom font for menu only

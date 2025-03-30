@@ -38,6 +38,21 @@ body {
     }
 }
 
+@layer utilities {
+    .custom-hide {
+        @media (min-width: 1000px) {
+            display: none;
+        }
+    }
+
+    .custom-show {
+        @media (min-width: 968px) {
+            display: flex;
+        }
+    }
+}
+
+
 
 a {
     text-decoration: none !important;
