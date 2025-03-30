@@ -6,28 +6,36 @@ function About() {
         <>
             <Navbar />
             <div className="max-w-4xl mx-auto p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-5xl mx-auto py-12">
-                    {/* Text Side */}
-                    <div>
-                        <h2 className="text-2xl font-bold text-gray-900">Who We Are</h2>
-                        <p className="text-gray-600 mt-4">
-                            Ocean pools have been described as a spiritual experience. They have become popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
-                        </p>
+                <h2 className="text-[24px] pt-12 font-semibold text-gray-700 text-center">Where Innovation Meets Nature</h2>
+                <p className="text-gray-600 mt-1 pt-3 text-center text-[16px]">
+                    An <b>ocean pool</b> is a fascinating convergence of a man-made pool and seawater, built along the coastline to provide a safer swimming environment while still being connected to the ocean.
+                    They became popularized in Australian culture and brought to numerous countries across the globe but have yet to be introduced in California.
+                </p>
+                <div className="items-center max-w-5xl mx-auto pt-10">
 
-                        <p className="text-gray-600 mt-4">Malibu Icebergs is a community-led proposal to bring an ocean pool to the Malibu landscape.
+                    <div className="aspect-[16/13] md:aspect-[16/13] w-full">
+                        <img
+                            src="./icebergs_2.png"
+                            className="w-full h-full object-cover object-top  rounded-[29px] shadow-2xl"
+                            alt="Source: https://icebergs.com.au/icebergs-club/"
+                            title="Source: https://icebergs.com.au/icebergs-club/"
+                        />
+                    </div>
+                    <div>
+
+                        <p className="text-gray-600 mt-14 text-[16px] text-center">
+                            Malibu Icebergs is a community-led proposal and public health initiative with the goal of developing an ocean pool on the Malibu landscape.
                             The introduction of such a facility brings something entirely new to the region: a unique
                             recreational experience with the iconic allure of Malibu.</p>
-                        <div className="text-left pt-5 text-gray-600 text-sm">- Rosie Babbra, Founder</div>
-                    </div>
 
-                    {/* Image Side */}
-                    <div>
-                        <img src="./icebergs.jpg" className="rounded-lg shadow-lg" alt="Ocean Pool" />
                     </div>
                 </div>
-                <div className="mx-auto bg-[#3b98982f] px-8 py-6 rounded-lg shadow-lg">
-                    <p className="font-semibold text-base pt-3">Our Mission</p>
-                    <p className="mt-2 text-gray-700 pb-3">
+                <div className="h-16"></div>
+                <div className="h-0.5 bg-[#cecbcb]"></div>
+                <div className="h-16"></div>
+                <div className="mx-auto  shadow-lg rounded-[29px] py-12 px-6">
+                    <p className="font-semibold text-2xl text-center text-gray-700">Our Mission</p>
+                    <p className="mt-2 text-gray-600 pb text-center">
                         Ocean pools enhance public health by offering ocean access while safeguarding swimmers from rocks and hazardous marine life. They provide an authentic open-water swimming experience within a controlled setting.
                         With sustainable design and accessibility as core tenets, the ocean pool will seamlessly integrate
                         with Malibu’s natural beauty, offering a safe and environmentally conscious way to enjoy ocean swimming.
@@ -38,6 +46,7 @@ function About() {
                     </p>
                 </div>
             </div>
+            <div className="h-56 "></div>
             <Footer />
         </>
     );

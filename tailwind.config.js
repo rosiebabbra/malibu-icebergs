@@ -6,8 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        custom: '1100px', // <- your new breakpoint
+      },
       fontFamily: {
-        montserrat: ["Montserrat", "Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Manrope", "sans-serif"], // Global default font
+        menu: ["BrownStd", "sans-serif"], // Custom font for menu only
+      },
+      fontWeight: {
+        light: "300",
+        bold: "700",
       },
     },
   },

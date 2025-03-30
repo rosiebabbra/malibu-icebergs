@@ -1,3 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'BrownStd';
+    src: url('./assets/fonts/') format('truetype');
+    font-weight: 300;
+    font-style: light;
+}
+
+@font-face {
+    font-family: 'BrownStd';
+    src: url(@BrownStdRegular) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrownStd';
+    src: url(@BrownStdBold) format('truetype');
+    font-weight: 700;
+    font-style: bold;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+}
+
+
+@layer base {
+    body {
+        @apply bg-[#f6f6ef] !important;
+    }
+}
+
+@layer utilities {
+    .custom-hide {
+        @media (min-width: 1000px) {
+            display: none;
+        }
+    }
+
+    .custom-show {
+        @media (min-width: 968px) {
+            display: flex;
+        }
+    }
+}
+
+
+
+a {
+    text-decoration: none !important;
+}
+
+
+#gradient-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1;
+}
+
+/* Hide scrollbar for Chrome, Safari and Edge */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+    scrollbar-width: none;
+}
